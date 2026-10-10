@@ -30,19 +30,19 @@ That is a gap of about **6 percentage points**.
 
 ### 1. Cleaning
 
-- Kept the raw data untouched on its own sheet (`in`) and worked on a separate `Clean` sheet, so the original could always be restored.
+- Kept the raw data untouched on its own sheet (in) and worked on a separate Clean sheet, so the original could always be restored.
 - Reduced **135 columns to 17** (about 87% fewer), keeping only what the question needed: landlord name, ID, type, region, number of tenants and the 12 satisfaction scores (TP01–TP12).
-- Used only the `_Calc` satisfaction columns, which hold the final percentages; the others were breakdowns by survey method or answer type.
+- Used only the _Calc satisfaction columns, which hold the final percentages; the others were breakdowns by survey method or answer type.
 - Fixed data-quality issues:
   - Landlord IDs stored as a mix of numbers and text → set the whole column to Text.
   - A score stored as text because of hidden leading spaces → converted back to a number.
-  - Non-numeric `[E]` codes in two score cells → cleared to blank (not 0, which would falsely pull averages down).
-- Renamed long regulator headers to short, readable names (e.g. `TP01_Satisfied_Calc_LCRA` → `Overall`).
-- Converted the data to an Excel table named `TSM`.
+  - Non-numeric [E] codes in two score cells → cleared to blank (not 0, which would falsely pull averages down).
+- Renamed long regulator headers to short, readable names (e.g. TP01_Satisfied_Calc_LCRA → Overall).
+- Converted the data to an Excel table named TSM.
 
 ### 2. Analysis
 
-- Built a PivotTable (`pvt_LA_vs_PRP`) showing **average** overall satisfaction and the **count** of landlords by landlord type.
+- Built a PivotTable (pvt_LA_vs_PRP) showing **average** overall satisfaction and the **count** of landlords by landlord type.
 - Changed Excel's default aggregation from Sum to Average, since adding percentages together has no meaning.
 - Kept the landlord count alongside the average so each figure's sample size is visible.
 
@@ -56,8 +56,8 @@ That is a gap of about **6 percentage points**.
 
 | File | Description |
 |---|---|
-| `tsm_2024_25_analysis.xlsx` | Excel workbook: raw data (`in`), cleaned table (`Clean`) and analysis with chart (`LA_vs_PRP`) |
-| `tsm_2024_25_clean.csv` | The cleaned data as CSV (353 landlords, 17 columns), readable on GitHub |
+| tsm_2024_25_analysis.xlsx | Excel workbook: raw data (in), cleaned table (Clean) and analysis with chart (LA_vs_PRP) |
+| tsm_2024_25_clean.csv | The cleaned data as CSV (353 landlords, 17 columns), readable on GitHub |
 
 ## Tools
 
