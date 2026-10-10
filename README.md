@@ -16,6 +16,8 @@ Across **353 social landlords**, housing association tenants reported higher ove
 
 That is a gap of about **6 percentage points**.
 
+![Average satisfaction: councils vs housing associations](chart_la_vs_prp.png)
+
 ### Limitations
 
 - Each landlord counts equally, so a small landlord affects the average as much as a large one (the averages are not weighted by number of tenants).
